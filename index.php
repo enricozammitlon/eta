@@ -14,20 +14,28 @@
   <h4>pplication</h4>
   <p><strong>ETA</strong> is an auotmated tracking system for replacement of faulty or broken parts </p>
 	
- <?php
-         $dbhost = 'hrr5mwqn9zs54rg4.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306';
-         $dbuser = 'n7c7rrk1rwdzvs3l';
-         $dbpass = 'zdan1klwh8drfa9n';
-         $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-      
-         if(! $conn ) {
-            die('Could not connect: ' . mysql_error());
-         }
-         else{
-         	echo '<h2>Connected successfully</h2>';
-         }
-         mysql_close($conn);
-      ?>
+	<?php
+		$url = getenv('JAWSDB_MARIA_URL');
+		$dbparts = parse_url($url);
+
+		$hostname = $dbparts['host'];
+		$username = $dbparts['user'];
+		$password = $dbparts['pass'];
+		$database = ltrim($dbparts['path'],'/');
+
+
+		// Create connection
+		$conn = mysqli_connect($hostname, $username, $password, $database);
+
+		// Check connection
+		if (!$conn) {
+			die("Connection failed: " . mysqli_connect_error());
+		}
+		echo "Connection was successfully established!";
+
+
+		mysql_close($conn);
+	?>
 
 </body>
 
