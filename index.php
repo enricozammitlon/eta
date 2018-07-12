@@ -33,21 +33,26 @@
         }
         echo "Connection was successfully established!";
 
-
-        $sql = 'CREATE TABLE USERS(
-          product_id INT NOT NULL AUTO_INCREMENT,
-          product_name VARCHAR(100) NOT NULL,
-          product_manufacturer VARCHAR(40) NOT NULL,
-          submission_date DATE,
-          PRIMARY KEY ( product_id )
-        );';
+        $sql = 'DROP TABLE users';
         $retval = mysql_query( $sql, $conn );
 
         if(! $retval ) {
           die('Could not create table: ' . mysql_error());
         }
 
+        $sql2 = 'CREATE TABLE users(
+          product_id INT NOT NULL AUTO_INCREMENT,
+          product_name VARCHAR(100) NOT NULL);';
+
+        $retval2 = mysql_query( $sql2, $conn );
+
+        if(! $retval2 ) {
+          die('Could not create table: ' . mysql_error());
+        }
+
         echo "table USERS created successfully\n";
+
+
 
         mysql_close($conn);
     ?>
