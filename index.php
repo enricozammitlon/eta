@@ -34,7 +34,13 @@
         echo "Connection was successfully established!";
 
 
-        $sql = 'CREATE TABLE USERS';
+        $sql = 'CREATE TABLE USERS(
+          product_id INT NOT NULL AUTO_INCREMENT,
+          product_name VARCHAR(100) NOT NULL,
+          product_manufacturer VARCHAR(40) NOT NULL,
+          submission_date DATE,
+          PRIMARY KEY ( product_id )
+        );';
         $retval = mysql_query( $sql, $conn );
 
         if(! $retval ) {
