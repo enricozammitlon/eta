@@ -7,11 +7,11 @@
 
 <body>
   <h1>E</h1>
-  <h4>quipment</h4>
+  <p>quipment</p>
   <h1>T</h1>
-  <h4>racking</h4>
+  <p>racking</p>
   <h1>A</h1>
-  <h4>pplication</h4>
+  <p>pplication</p>
   <p><strong>ETA</strong> is an auotmated tracking system for replacement of faulty or broken parts </p>
     
     <?php
@@ -32,27 +32,6 @@
             die("Connection failed: " . mysqli_connect_error());
         }
         echo "Connection was successfully established!";
-
-        $sql = 'DROP TABLE users';
-        $retval = mysql_query( $sql, $conn );
-
-        if(! $retval ) {
-          die('Could not create table: ' . mysql_error());
-        }
-
-        $sql2 = 'CREATE TABLE users(
-          product_id INT NOT NULL AUTO_INCREMENT,
-          product_name VARCHAR(100) NOT NULL);';
-
-        $retval2 = mysql_query( $sql2, $conn );
-
-        if(! $retval2 ) {
-          die('Could not create table: ' . mysql_error());
-        }
-
-        echo "table USERS created successfully\n";
-
-
 
         mysql_close($conn);
     ?>
