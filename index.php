@@ -34,6 +34,17 @@
 		echo "Connection was successfully established!";
 
 
+
+		echo 'Connected successfully<br />';
+		$sql = 'CREATE TABLE USERS';
+		$retval = mysql_query( $sql, $conn );
+
+		if(! $retval ) {
+		die('Could not create table: ' . mysql_error());
+		}
+
+		echo "table USERS created successfully\n";
+
 		mysql_close($conn);
 	?>
 
