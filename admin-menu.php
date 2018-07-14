@@ -6,7 +6,7 @@
              Homepage</a>
             </li>
             <li id="menu-item-2" class="menu-item">
-            <a href="all-items">
+            <a href="all-items.php">
              All Items</a>
             </li>
             <li id="menu-item-3" class="menu-item">
@@ -16,6 +16,10 @@
             <li id="menu-item-4" class="menu-item">
             <a href="#">
             Updates</a>
+            </li>
+            <li id="menu-item-5" class="menu-item">
+            <a href="#">
+            Users</a>
             </li>
         </ul>
     </div>
