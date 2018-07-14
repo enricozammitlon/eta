@@ -1,48 +1,47 @@
 h1,p{
-	display:inline;
+  display:inline;
 }
 
 header{
-	align-self: right;
-	justify-content: center;
-	padding-left: 21%;
-	background: #151515;
-	color: white;
-	border-radius: 10px;
-	height: 100px;
-	align-content: center;
-	padding-top: 20px;
-	padding-bottom: 30px;
+  align-self: right;
+  justify-content: center;
+  padding-left: 21%;
+  background: #151515;
+  color: white;
+  border-radius: 10px;
+  align-content: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 footer{
-	text-align: : center;
+  text-align: : center;
 }
 
 div.left-admin-menu {
-	display: flex;
-	width: 20%;
-	justify-content: center;
-	background: #151515;
-	border-radius: 10px;
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  background: #151515;
+  border-radius: 10px;
 }
 
 div.main-content {
-	margin-left:20px;
-	align-self: right;
-	width: 80%;
+  margin-left:20px;
+  align-self: right;
+  width: 80%;
 }
 
 div.left-admin-menu button{
-	align-self: center;
-	width: 200px;
-	margin-top: 20px;
+  align-self: center;
+  width: 200px;
+  margin-top: 20px;
 }
 
 div.all-content {
-	display:flex;
-	margin-top:20px;
-	height: 100%;
+  display:flex;
+  margin-top:20px;
+  height: 100%;
 }
 
 #nav{
@@ -54,9 +53,9 @@ div.all-content {
   color: #0f9f0c;
 }
 #nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 #nav li {
   border-top: 1px solid #252525;
@@ -65,10 +64,10 @@ div.all-content {
   width: 235px;
 }
 #nav li ul li a {
-    font-size: 10px;
-    padding-left: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  font-size: 10px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 #nav li a {
@@ -85,6 +84,6 @@ div.all-content {
   padding-left: 10px;
 }
 #nav li a:hover {
-background: #222;
-color: #fff;
+  background: #222;
+  color: #fff;
 }
