@@ -60,7 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         
 
-        if($stmt = mysqli_prepare($link, $sql)){
+        if($stmt = mysqli_prepare($conn, $sql)){
 
             // Bind variables to the prepared statement as parameters
 
