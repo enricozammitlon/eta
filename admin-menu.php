@@ -3,16 +3,16 @@
         <ul id="menu-new-menu" class="menu">
             <li id="menu-item-6876" class="menu-item">
             <a href="#">
-             First</a>
+             All Items</a>
             </li>
             <li id="menu-item-6747" class="menu-item">
             <a href="#">
-             Second</a>
+             New Item</a>
             </li>
             <ul class="sub-menu">
             <li id="menu-item-6681" class="menu-item">
             <a href="#">
-            Thirds</a>
+            Updates</a>
             </li>
             </ul>
         </ul>
