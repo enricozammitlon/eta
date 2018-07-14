@@ -2,7 +2,7 @@
     <div class="menu-new-menu-container">
         <ul id="menu-new-menu" class="menu">
             <li id="menu-item-1" class="menu-item">
-            <a href="#">
+            <a href="index.php">
              Homepage</a>
             </li>
             <li id="menu-item-2" class="menu-item">
