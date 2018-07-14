@@ -6,14 +6,14 @@ header{
 	align-self: right;
   justify-content: center;
 	padding-left: 21%;
-	box-shadow: inset 0 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 div.left-admin-menu {
 	display: flex;
-	flex-direction: column;
 	width: 20%;
 	justify-content: center;
+	background: #151515;
+	border-radius: 10px;
 }
 
 div.main-content {
@@ -31,11 +31,13 @@ div.left-admin-menu button{
 div.all-content {
 	display:flex;
 	margin-top:50px;
+	height: 100%;
 }
 
 #nav{
-  padding-bottom: 20px;
-
+  padding-top: 20px;
+  border-radius: 10px;
+  width: 100%;
 }
 #nav i{
   color: #0f9f0c;
@@ -48,7 +50,7 @@ div.all-content {
 #nav li {
   border-top: 1px solid #252525;
   border-bottom: 1px solid #000;
-  /* display: inline-flex; */
+  display: inline-flex;
   width: 235px;
 }
 #nav li ul li a {
@@ -65,7 +67,6 @@ div.all-content {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 800;
-  /* letter-spacing: .2em; */
   font-size: 14px;
   display: inline-block;
   width: 100%;
