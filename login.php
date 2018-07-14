@@ -56,7 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         // Prepare a select statement
 
-        $sql = "SELECT username, password FROM users WHERE username = ?";
+        $sql = "SELECT USERNAME, PASSWORD FROM users WHERE USERNAME = ?";
 
         
 
