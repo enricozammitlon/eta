@@ -6,8 +6,7 @@
 	    <div class="main-content">
 		<?php
 			$sql = 'SELECT * FROM items ';
-      mysqli_select_db($database);
-			$retval = mysqli_query( $sql, $conn );
+			$retval = mysqli_query($conn,$sql);
 
 			if(! $retval ) {
 			  die('Could not get data: ' . mysqli_error());
@@ -15,7 +14,7 @@
 			}
 
 			else{
-				while($row = mysqli_fetch_array($retval, MYSQL_ASSOC)) {
+				while($row = mysqli_fetch_assoc($retval)) {
 				  echo "Product ID :{$row['SERIALID']} <br> ".
 				     "Name: {$row['NAME']} <br> ".
 				     "--------------------------------<br>";
