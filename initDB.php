@@ -1,4 +1,5 @@
     <?php
+        echo "Connecting with DB...";
         $url = getenv('JAWSDB_MARIA_URL');
         $dbparts = parse_url($url);
 
