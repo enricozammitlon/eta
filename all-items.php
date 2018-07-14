@@ -7,19 +7,19 @@
 		<?php
 			$sql = 'SELECT * FROM items ';
 
-		   $retval = mysql_query( $sql, $conn );
-		   
-		   if(! $retval ) {
-		      die('Could not get data: ' . mysql_error());
-		      echo '<p>Error: Could not get data </p>';
-		   }
+			$retval = mysql_query( $sql, $conn );
 
-		   while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
-		      echo "Product ID :{$row['SERIALID']} <br> ".
-		         "Name: {$row['NAME']} <br> ".
-		         "--------------------------------<br>";
-		   }
-		   echo "Fetched data successfully\n";
+			if(! $retval ) {
+			  die('Could not get data: ' . mysql_error());
+			  echo '<p>Error: Could not get data </p>';
+			}
+
+			while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
+			  echo "Product ID :{$row['SERIALID']} <br> ".
+			     "Name: {$row['NAME']} <br> ".
+			     "--------------------------------<br>";
+			}
+			echo "Fetched data successfully\n";
 		?>
 	    </div>
 	  </div>
