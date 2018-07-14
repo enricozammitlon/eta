@@ -3,6 +3,7 @@ h1,p{
 }
 
 header{
+  display:flex;
   align-self: right;
   justify-content: center;
   padding-left: 21%;
@@ -12,6 +13,9 @@ header{
   align-content: center;
   padding-top: 20px;
   padding-bottom: 30px;
+}
+div.db-status {
+  text-align: right;
 }
 
 footer{

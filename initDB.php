@@ -15,8 +15,8 @@
         // Check connection
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
+            echo "<p style='color:#f00'>Not Connected</p>";
         }
-        echo "Connection was successfully established!";
-
+        echo "<p style='color:#00fc4a'>Connected</p>";
         mysql_close($conn);
     ?>
