@@ -7,14 +7,14 @@
 		<?php
 			$sql = 'SELECT * FROM items ';
 
-			$retval = mysql_query( $sql, $conn );
+			$retval = mysqli_query( $sql, $conn );
 
 			if(! $retval ) {
-			  die('Could not get data: ' . mysql_error());
+			  die('Could not get data: ' . mysqli_error());
 			  echo '<p>Error: Could not get data </p>';
 			}
 
-			while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
+			while($row = mysqli_fetch_array($retval, MYSQL_ASSOC)) {
 			  echo "Product ID :{$row['SERIALID']} <br> ".
 			     "Name: {$row['NAME']} <br> ".
 			     "--------------------------------<br>";

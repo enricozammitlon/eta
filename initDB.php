@@ -9,11 +9,11 @@
 
 
         // Create connection
-        $conn = mysql_connect($hostname, $username, $password, $database);
+        $conn = mysqli_connect($hostname, $username, $password, $database);
 
         // Check connection
         if (!$conn) {
-            die("Connection failed: " . mysql_connect_error());
+            die("Connection failed: " . mysqli_connect_error());
             echo "<p style='color:#f00'>Not Connected</p>";
         }
         echo "<p style='color:#00fc4a'>Connected</p>";
