@@ -15,8 +15,10 @@
 
 			else{
 				while($row = mysqli_fetch_assoc($retval)) {
-				  echo "Product ID :{$row['SERIALID']} <br> ".
-				     "Name: {$row['NAME']} <br> ".
+				  echo "Serial ID :{$row['SERIALID']} <br> ".
+				     "Product ID: {$row['PRODNUM']} <br> ".
+             "Name: {$row['NAME']} <br> ".
+             "User ID of Reporter: {$row['USERID']} <br> ".
 				     "--------------------------------<br>";
 				}
 				echo "Fetched data successfully\n";
