@@ -6,7 +6,7 @@
              Homepage</a>
             </li>
             <li id="menu-item-2" class="menu-item">
-            <a href="#">
+            <a href="all-items">
              All Items</a>
             </li>
             <li id="menu-item-3" class="menu-item">

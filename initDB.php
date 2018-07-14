@@ -9,7 +9,7 @@
 
 
         // Create connection
-        $conn = mysqli_connect($hostname, $username, $password, $database);
+        $conn = mysql_connect($hostname, $username, $password, $database);
 
         // Check connection
         if (!$conn) {
