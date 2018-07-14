@@ -8,6 +8,10 @@ header{
 	padding-left: 21%;
 }
 
+footer{
+	justify-content: center;
+}
+
 div.left-admin-menu {
 	display: flex;
 	width: 20%;
