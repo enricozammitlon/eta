@@ -3,9 +3,20 @@ h1,p{
 }
 
 div.left-admin-menu {
-
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	justify-content: center;
 }
 
 div.main-content {
-	
+	margin-left:20px;
+	align-self: right;
+	width: 80%;
+}
+
+div.left-admin-menu button{
+	align-self: center;
+	width: 200px;
+	margin-top: 20px;
 }
