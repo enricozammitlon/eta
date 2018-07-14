@@ -6,7 +6,7 @@
 	    <div class="main-content">
 		<?php
 			$sql = 'SELECT * FROM items ';
-
+      mysqli_select_db($database);
 			$retval = mysqli_query( $sql, $conn );
 
 			if(! $retval ) {
@@ -14,13 +14,15 @@
 			  echo '<p>Error: Could not get data </p>';
 			}
 
-			while($row = mysqli_fetch_array($retval, MYSQL_ASSOC)) {
-			  echo "Product ID :{$row['SERIALID']} <br> ".
-			     "Name: {$row['NAME']} <br> ".
-			     "--------------------------------<br>";
+			else{
+				while($row = mysqli_fetch_array($retval, MYSQL_ASSOC)) {
+				  echo "Product ID :{$row['SERIALID']} <br> ".
+				     "Name: {$row['NAME']} <br> ".
+				     "--------------------------------<br>";
+				}
+				echo "Fetched data successfully\n";
 			}
-			echo "Fetched data successfully\n";
 		?>
-	    </div>
 	  </div>
+	</div>
 <?php include_once('footer.php'); ?>
