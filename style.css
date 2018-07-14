@@ -4,12 +4,19 @@ h1,p{
 
 header{
 	align-self: right;
-  justify-content: center;
+	justify-content: center;
 	padding-left: 21%;
+	background: #151515;
+	color: white;
+	border-radius: 10px;
+	height: 100px;
+	align-content: center;
+	padding-top: 20px;
+	padding-bottom: 30px;
 }
 
 footer{
-	justify-content: center;
+	text-align: : center;
 }
 
 div.left-admin-menu {
@@ -34,7 +41,7 @@ div.left-admin-menu button{
 
 div.all-content {
 	display:flex;
-	margin-top:50px;
+	margin-top:20px;
 	height: 100%;
 }
 
