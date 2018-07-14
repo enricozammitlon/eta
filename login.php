@@ -132,7 +132,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         }
 
-        
+        else{
+        	echo "Oops! Something went wrong af. Please try again later.";
+
+        }        
 
         // Close statement
 
