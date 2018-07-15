@@ -4,6 +4,7 @@
 	    <?php include_once('admin-menu.php');?>
 	    </div>
 	    <div class="main-content">
+        <h2>All Items</h2>
 		<?php
 			$sql = 'SELECT * FROM items ';
 			$retval = mysqli_query($conn,$sql);
@@ -15,7 +16,7 @@
 
 			else{
         ?>
-        <table border="1" style="width:300px">
+        <table border="1" style="width:100%">
           <thead>
             <tr>
               <th>Serial ID</th>
@@ -39,7 +40,6 @@
           </tbody>
         </table>
 				<?php
-				echo "Fetched data successfully\n";
 			}
 		?>
 	  </div>
