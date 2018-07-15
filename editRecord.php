@@ -13,16 +13,6 @@
     			  die('Could not get data: '.mysqli_error());
     			}
     			else {?>
-            <table border="1" style="width:100%">
-              <thead>
-                <tr>
-                  <th>Serial ID</th>
-                  <th>Product ID</th>/editRecord.php
-                  <th>Name</th>
-                  <th>User ID of Reporter</th>
-                </tr>
-              </thead>
-              <tbody>
                 <?php
                   while($row = mysqli_fetch_assoc($retval)) {
                     echo "
@@ -60,8 +50,6 @@
                       ";
                   }
                 ?>
-              </tbody>
-            </table>
     				<?php
     			}
         }
