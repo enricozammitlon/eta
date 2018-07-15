@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){?>
 	    <?php include_once('admin-menu.php');?>
 	    </div>
 	    <div class="main-content">
-	      <h1> <?php $_POST["id"] ?></h1>
+	      <h1> <?php echo '$_POST["id"]' ?></h1>
 	    </div>
 	  </div>
 
