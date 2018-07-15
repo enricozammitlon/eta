@@ -7,6 +7,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){?>
 	    </div>
 	    <div class="main-content">
 	      <?php
+	      	echo '$_POST["serialid"]';
+	      	echo '$_POST["prodnum"]';	      	
 			$sql = 'SELECT * FROM items WHERE (SERIALID = $_POST["serialid"]) AND (PRODNUM = $_POST["prodnum"])';
 			$retval = mysqli_query($conn,$sql);
 
