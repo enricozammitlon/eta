@@ -89,7 +89,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
 
                     // Bind result variables
-                    $hashed_password = password_hash("abc123",PASSWORD_DEFAULT);
                     mysqli_stmt_bind_result($stmt, $username, $hashed_password);
 
                     if(mysqli_stmt_fetch($stmt)){
