@@ -22,7 +22,6 @@
               <th>Product ID</th>
               <th>Name</th>
               <th>User ID of Reporter</th>
-              <th>Name</th>
             </tr>
           </thead>
           <tbody>
