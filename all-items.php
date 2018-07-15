@@ -14,13 +14,30 @@
 			}
 
 			else{
-				while($row = mysqli_fetch_assoc($retval)) {
-				  echo "Serial ID :{$row['SERIALID']} <br> ".
-				     "Product ID: {$row['PRODNUM']} <br> ".
-             "Name: {$row['NAME']} <br> ".
-             "User ID of Reporter: {$row['USERID']} <br> ".
-				     "--------------------------------<br>";
-				}
+        ?>
+        <table border="1" style="width:300px">
+          <thead>
+            <tr>
+              <th>Serial ID</th>
+              <th>Product ID</th>
+              <th>Name</th>
+              <th>User ID of Reporter</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <?php
+                while($row = mysqli_fetch_assoc($retval)) {
+          echo "
+              <td>{$row['SERIALID']}</td>
+              <td>{$row['PRODNUM']}</td>
+              <td>{$row['NAME']}</td>
+              <td>{$row['USERID']}</td>";}?>
+            </tr>
+          </tbody>
+        </table>
+				<?php }
 				echo "Fetched data successfully\n";
 			}
 		?>
