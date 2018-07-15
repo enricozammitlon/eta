@@ -91,7 +91,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     // Bind result variables
 
                     mysqli_stmt_bind_result($stmt, $username, $hashed_password);
-                    $hashed_password = password_hash('abc123');
+                    $hashed_password = password_hash('abc123',PASSWORD_DEFAULT);
 
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
