@@ -9,7 +9,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){?>
 	      <?php
 			$sql = 'SELECT * FROM items WHERE SERIALID =\''.$_POST["serialid"].'\' AND PRODNUM = \''.$_POST["prodnum"].'\'';
 			$retval = mysqli_query($conn,$sql);
-			echo $sql;
 			if(! $retval ) {
 			  die('Could not get data: '.mysqli_error());
 			}
@@ -30,10 +29,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){?>
               while($row = mysqli_fetch_assoc($retval)) {
                 echo "
                   <tr>
-                  <td>{$row['SERIALID']}</td>
-                  <td>{$row['PRODNUM']}</td>
-                  <td>{$row['NAME']}</td>
-                  <td>{$row['USERID']}</td>
+                  <td contenteditable>{$row['SERIALID']}</td>
+                  <td contenteditable>{$row['PRODNUM']}</td>
+                  <td contenteditable>{$row['NAME']}</td>
+                  <td contenteditable>{$row['USERID']}</td>
                   </tr>";
               }
             ?>
