@@ -7,12 +7,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){?>
 	    </div>
 	    <div class="main-content">
 	      <?php
-			$sql = 'SELECT * FROM items WHERE SERIALID = $_POST["serialid"] AND PRODNUM = $_POST["prodnum"]';
+			$sql = 'SELECT * FROM items WHERE SERIALID = "$_POST["serialid"]" AND PRODNUM = "$_POST["prodnum"]"';
 			$retval = mysqli_query($conn,$sql);
 
 			if(! $retval ) {
-			  die('Could not get data: ' . mysqli_error());
-			  echo '<p>Error: Could not get data </p>';
+			  die('Could not get data: '.mysqli_error());
 			}
 
 			else{
