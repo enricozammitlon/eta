@@ -18,7 +18,7 @@
             Updates</a>
             </li>
             <li id="menu-item-5" class="menu-item">
-            <a href="#">
+            <a href="users.php">
             Users</a>
             </li>
             <li id="menu-item-6" class="menu-item">
