@@ -35,7 +35,7 @@
                   <td>{$row['NAME']}</td>
                   <td>{$row['USERID']}</td>
                   <td>
-                  <form action='editRecord.php' method='post/get'>
+                  <form action='editRecord.php' method='post'>
                   <input type='hidden' name='id' value='<?php echo {$row['SERIALID']}.{$row['PRODNUM']} ?>' />
                   <input type='submit' value='Edit'/>
                   </form>
