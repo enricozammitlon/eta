@@ -110,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                             // Display an error message if password is not valid
 
-                            $password_err = 'The password you entered was not valid.';
+                            $password_err = 'The password you entered was not valid.'.$hashed_password;
 
                         }
 
