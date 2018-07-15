@@ -47,7 +47,7 @@
     }
 		?>
       <?php 
-        else if($_SERVER["REQUEST_METHOD"] == "GET"){?>
+        elseif($_SERVER["REQUEST_METHOD"] == "GET"){?>
           ?>
           <table border="1" style="width:100%">
           <thead>
