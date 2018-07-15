@@ -16,7 +16,7 @@
               <thead>
                 <tr>
                   <th>Serial ID</th>
-                  <th>Product ID</th>
+                  <th>Product ID</th>/editRecord.php
                   <th>Name</th>
                   <th>User ID of Reporter</th>
                 </tr>
@@ -27,11 +27,11 @@
                     echo "
                       <form action='updateRecord.php' method='post'>
                       <tr>
-                      <td contenteditable><input name='serialid'/>{$row['SERIALID']}</td>
-                      <td contenteditable><input name='prodid'/>{$row['PRODNUM']}</td>
-                      <td contenteditable><input name='name'/>{$row['NAME']}</td>
-                      <td contenteditable><input name='userid'/>{$row['USERID']}</td>
-                      <td><input type='submit' value='Save'/></td>
+                      <input name='serialid'/>{$row['SERIALID']}
+                      <input name='prodid'/>{$row['PRODNUM']}
+                      <input name='name'/>{$row['NAME']}
+                      <input name='userid'/>{$row['USERID']}
+                      <input type='submit' value='Save'/>
                       </tr>
                       </form>
                       ";
@@ -55,10 +55,10 @@
           <tbody>
             <tr>
             <form action='updateRecord.php' method='post'>
-            <td contenteditable><input name='serialid'/></td>
-            <td contenteditable><input name='productid'/></td>
-            <td contenteditable><input name='name'/></td>
-            <td contenteditable><input name='userid'/></td>
+            <input type='hidden' name='serialid'/>
+            <input type='hidden' name='productid'/>
+            <input type='hidden' name='name'/>
+            <input type='hidden' name='userid'/>
             <input type='submit' value='Save'/>
             </form>
             </tr>
