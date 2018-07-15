@@ -10,7 +10,7 @@
              All Items</a>
             </li>
             <li id="menu-item-3" class="menu-item">
-            <a href="updateRecord.php">
+            <a href="editRecord.php">
              New Item</a>
             </li>
             <li id="menu-item-4" class="menu-item">

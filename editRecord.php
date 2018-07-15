@@ -34,8 +34,8 @@
                   <td contenteditable><input name='prodid'/>{$row['PRODNUM']}</td>
                   <td contenteditable><input name='name'/>{$row['NAME']}</td>
                   <td contenteditable><input name='userid'/>{$row['USERID']}</td>
+                  <td><input type='submit' value='Save'/></td>
                   </tr>
-                  <input type='submit' value='Save'/>
                   </form>
                   ";
               }
