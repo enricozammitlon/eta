@@ -1,4 +1,23 @@
-<?php session_start(); ?>
+<?php
+
+// Initialize the session
+
+session_start();
+
+ 
+
+// If session variable is not set it will redirect to login page
+
+if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+
+  header("location: login.php");
+
+  exit;
+
+}
+
+?>
+
  <html>
 
   <head>
@@ -24,5 +43,8 @@
       <div class="db-status">
         <p>DB Status: </p>
         <strong><?php include_once('initDB.php');?></strong>
+      </div>
+      <div class="logout-section">
+        <a href="logou.php">Logout</a>
       </div>
      </header>      
