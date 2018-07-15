@@ -167,6 +167,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <style type="text/css">
 
+   		.status-section{
+   			display:none;
+   		}
+
         body{ font: 14px sans-serif; }
 
         .wrapper{ width: 350px; padding: 20px; }
