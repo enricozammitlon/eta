@@ -26,18 +26,20 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <?php
-                while($row = mysqli_fetch_assoc($retval)) {
-          echo "
-              <td>{$row['SERIALID']}</td>
-              <td>{$row['PRODNUM']}</td>
-              <td>{$row['NAME']}</td>
-              <td>{$row['USERID']}</td>";}?>
-            </tr>
+            <?php
+              while($row = mysqli_fetch_assoc($retval)) {
+                echo "
+                  <tr>
+                  <td>{$row['SERIALID']}</td>
+                  <td>{$row['PRODNUM']}</td>
+                  <td>{$row['NAME']}</td>
+                  <td>{$row['USERID']}</td>
+                  </tr>";
+              }
+            ?>
           </tbody>
         </table>
-				<?php }
+				<?php
 				echo "Fetched data successfully\n";
 			}
 		?>
