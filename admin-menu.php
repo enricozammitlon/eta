@@ -21,6 +21,10 @@
             <a href="#">
             Users</a>
             </li>
+            <li id="menu-item-6" class="menu-item">
+            <a href="logout.php">
+            Logout</a>
+            </li>
         </ul>
     </div>
 </nav>

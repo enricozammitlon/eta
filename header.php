@@ -44,7 +44,4 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
         <p>DB Status: </p>
         <strong><?php include_once('initDB.php');?></strong>
       </div>
-      <div class="logout-section">
-        <a href="logout.php">Logout</a>
-      </div>
      </header>      
