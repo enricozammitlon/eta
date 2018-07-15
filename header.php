@@ -45,6 +45,6 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
         <strong><?php include_once('initDB.php');?></strong>
       </div>
       <div class="logout-section">
-        <a href="logou.php">Logout</a>
+        <a href="logout.php">Logout</a>
       </div>
      </header>      
