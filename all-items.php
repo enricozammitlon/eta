@@ -34,10 +34,12 @@
                   <td>{$row['PRODNUM']}</td>
                   <td>{$row['NAME']}</td>
                   <td>{$row['USERID']}</td>
-                  <form action='editItem.php' method='post/get'>
+                  <td>
+                  <form action='editRecord.php' method='post/get'>
                   <input type='hidden' name='id' value='<?php echo {$row['SERIALID']}.{$row['PRODNUM']} ?>' />
                   <input type='submit' value='Edit'/>
                   </form>
+                  </td>
                   </tr>";
               }
             ?>
