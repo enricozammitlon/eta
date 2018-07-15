@@ -36,8 +36,8 @@
                   <td>{$row['USERID']}</td>
                   <td>
                   <form action='editRecord.php' method='post'>
-                  <input type='hidden' name='serialid' value=\"<?php echo {$row['SERIALID']}?>\" />
-                  <input type='hidden' name='prodnum' value=\"<?php echo {$row['PRODNUM']}?>\" />
+                  <input type='hidden' name='serialid' value=\"{$row['SERIALID']}\" />
+                  <input type='hidden' name='prodnum' value=\"{$row['PRODNUM']}\" />
                   <input type='submit' value='Edit'/>
                   </form>
                   </td>

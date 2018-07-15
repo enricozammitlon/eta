@@ -7,16 +7,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){?>
 	    </div>
 	    <div class="main-content">
 	      <?php
-		    foreach ($_POST as $key => $value) {
-		        echo "<tr>";
-		        echo "<td>";
-		        echo $key;
-		        echo "</td>";
-		        echo "<td>";
-		        echo $value;
-		        echo "</td>";
-		        echo "</tr>";
-		    }	      	
 			$sql = 'SELECT * FROM items WHERE SERIALID=$_POST["serialid"] AND PRODNUM=$_POST["prodnum"]';
 			$retval = mysqli_query($conn,$sql);
 
