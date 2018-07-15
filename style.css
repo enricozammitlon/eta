@@ -2,6 +2,10 @@ h1,p{
   display:inline;
 }
 
+body{
+  background-image: url("images/bg.png");
+}
+
 header{
   display:flex;
   align-self: right;
