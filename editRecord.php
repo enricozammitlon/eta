@@ -1,4 +1,5 @@
-	<?php include_once('header.php');?>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <?php include_once('header.php');?>
 	  <div class="all-content">
 	    <div class="left-admin-menu">
 	    <?php include_once('admin-menu.php');?>
@@ -25,14 +26,36 @@
                 <?php
                   while($row = mysqli_fetch_assoc($retval)) {
                     echo "
-                      <form action='updateRecord.php' method='post'>
-                      <tr>
-                      <input name='serialid'/>{$row['SERIALID']}
-                      <input name='prodid'/>{$row['PRODNUM']}
-                      <input name='name'/>{$row['NAME']}
-                      <input name='userid'/>{$row['USERID']}
+                    <form action='updateRecord.php' method='post'>
+                     <div class='row margin'>
+                        <div class='input-field col s12'>
+                          <i class='mdi-social-person-outline prefix'></i>
+                          <input id='serialid' type='text' class='validate' value='{$row['SERIALID']}'>
+                          <label for='serialid' class='center-align'>Serial ID</label>
+                        </div>
+                      </div>
+                      <div class='row margin'>
+                        <div class='input-field col s12'>
+                          <i class='mdi-communication-email prefix'></i>
+                          <input id='prodid' type='text' class='validate' value='{$row['PRODNUM']}'>
+                          <label for='prodid' class='center-align'>Product ID</label>
+                        </div>
+                      </div>
+                      <div class='row margin'>
+                        <div class='input-field col s12'>
+                          <i class='mdi-action-lock-outline prefix'></i>
+                          <input id='name' type='text' class='validate' value='{$row['NAME']}'>
+                          <label for='name'>Name</label>
+                        </div>
+                      </div>
+                      <div class='row margin'>
+                        <div class='input-field col s12'>
+                          <i class='mdi-action-lock-outline prefix'></i>
+                          <input id='userid' type='text' value='{$row['USERID']}'>
+                          <label for='userid'>User ID</label>
+                        </div>
+                      </div>
                       <input type='submit' value='Save'/>
-                      </tr>
                       </form>
                       ";
                   }
