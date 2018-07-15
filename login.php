@@ -171,9 +171,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    			display:none;
    		}
 
-        body{ font: 14px sans-serif; }
 
-        .wrapper{ width: 350px; padding: 20px; }
+        body{ font: 14px sans-serif; justify-content: center;display: flex;background: #151515;padding-top: 100px;}
+
+        .wrapper{ width: 350px; padding: 20px; background: white;}
 
     </style>
 
