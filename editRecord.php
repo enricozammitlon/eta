@@ -13,7 +13,7 @@
     			}
     			else {?>
                 <?php
-                  while($row = mysqli_fetch_assoc($retval)) {
+                  if($row = mysqli_fetch_assoc($retval)) {
                     echo "
                     <form action='updateRecord.php' method='post'>
                       <div class='row'>
