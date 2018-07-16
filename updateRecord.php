@@ -11,10 +11,15 @@ if(isset($_POST["new-record"])){
 }
 
 else{
-  $sql = 'UPDATE items SET SERIALID = \''.$_POST["serialid"].'\',
-    PRODNUM = \''.$_POST["prodid"].'\',
-    NAME = \''.$_POST["name"].'\',
-    USERID = \''.$_POST["userid"].'\'WHERE SERIALID =\''.$_POST["serialid"].'\' AND PRODNUM = \''.$_POST["prodid"].'\'' ;
+
+  $sql = 'DELETE FROM items WHERE SERIALID =\''.$_POST["prevserialid"].'\' AND PRODNUM = \''.$_POST["prevprodid"].'\';';
+
+
+  $sql = $sql.'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
+  \''.$_POST["name"].'\',
+  \''.$_POST["prodid"].'\',
+  \''.$_POST["userid"].'\')';
+
   }
 
 $retval = mysqli_query($conn,$sql);

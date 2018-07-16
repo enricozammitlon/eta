@@ -32,6 +32,9 @@
                         <input name='userid' type='text' class='left-align' value='{$row['USERID']}'>
                         <label for='userid' class='left-align'>User ID</label>
                       </div>
+                      <input type='hidden' name='prevserialid' value='{$row['SERIALID']}'/>
+                      <input type='hidden' name='prevprodnum' value='{$row['PRODNUM']}'/>
+
                       <input type='submit' value='Save'/>
                       </form>
                       ";
