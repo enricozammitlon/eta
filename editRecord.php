@@ -1,4 +1,3 @@
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
   <?php include_once('header.php');?>
 	  <div class="all-content">
 	    <div class="left-admin-menu">
