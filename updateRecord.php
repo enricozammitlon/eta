@@ -12,10 +12,10 @@ if(isset($_POST["new-record"])){
 
 else{
 
-  $sql = 'DELETE FROM items WHERE SERIALID =\''.$_POST["prevserialid"].'\' AND PRODNUM = \''.$_POST["prevprodnum"].'\';';
+  $sql1 = 'DELETE FROM items WHERE SERIALID =\''.$_POST["prevserialid"].'\' AND PRODNUM = \''.$_POST["prevprodnum"].'\';';
 
 
-  $sql = $sql.'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
+  $sql = $sql1.'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
   \''.$_POST["name"].'\',
   \''.$_POST["prodid"].'\',
   \''.$_POST["userid"].'\')';
