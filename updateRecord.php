@@ -3,10 +3,10 @@
 include_once('initDB.php');
 
 if(isset($_POST["new-record"])){
-  $sql = 'INSERT INTO items VALUES \''.$_POST["serialid"].'\',
+  $sql = 'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
     \''.$_POST["prodid"].'\',
     \''.$_POST["name"].'\',
-    \''.$_POST["userid"].'\'';
+    \''.$_POST["userid"].'\')';
 
 }
 
