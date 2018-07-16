@@ -5,7 +5,7 @@ include_once('initDB.php');
 $sql = 'UPDATE items SET SERIALID = \''.$_POST["serialid"].'\',
     PRODNUM = \''.$_POST["prodid"].'\',
     NAME = \''.$_POST["name"].'\',
-    USERID = \''.$_POST["userid"].'\'WHERE SERIALID =\''.$_POST["serialid"].'\' AND PRODNUM = \''.$_POST["prodnum"].'\'' ;
+    USERID = \''.$_POST["userid"].'\'WHERE SERIALID =\''.$_POST["serialid"].'\' AND PRODNUM = \''.$_POST["prodid"].'\'' ;
 
 $retval = mysqli_query($conn,$sql);
 
