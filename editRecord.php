@@ -17,19 +17,19 @@
                     echo "
                     <form action='updateRecord.php' method='post'>
                       <div class='row'>
-                        <input id='serialid' type='text' class='left-align' value='{$row['SERIALID']}'>
+                        <input name='serialid' type='text' class='left-align' value='{$row['SERIALID']}'>
                         <label for='serialid' class='left-align'>Serial ID</label>
                       </div>
                       <div class='row'>
-                        <input id='prodid' type='text' class='left-align' value='{$row['PRODNUM']}'>
+                        <input name='prodid' type='text' class='left-align' value='{$row['PRODNUM']}'>
                         <label for='prodid' class='left-align'>Product ID</label>
                       </div>
                       <div class='row'>
-                        <input id='name' type='text' class='left-align' value='{$row['NAME']}'>
+                        <input name='name' type='text' class='left-align' value='{$row['NAME']}'>
                         <label for='name' class='left-align'>Name</label>
                       </div>
                       <div class='row'>
-                        <input id='userid' type='text' class='left-align' value='{$row['USERID']}'>
+                        <input name='userid' type='text' class='left-align' value='{$row['USERID']}'>
                         <label for='userid' class='left-align'>User ID</label>
                       </div>
                       <input type='submit' value='Save'/>
