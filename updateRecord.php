@@ -16,6 +16,8 @@ if(! $retval ) {
 
 else{
   echo 'Successfully updated';
+  header("location: all-items.php");
+
 }
 
 ?>
