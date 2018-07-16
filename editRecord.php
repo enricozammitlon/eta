@@ -41,27 +41,26 @@
     			}
         }
         elseif($_SERVER["REQUEST_METHOD"] == "GET"){?>
-          <table border="1" style="width:100%">
-          <thead>
-            <tr>
-              <th>Serial ID</th>
-              <th>Product ID</th>
-              <th>Name</th>
-              <th>User ID of Reporter</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-            <form action='updateRecord.php' method='post'>
-            <input type='hidden' name='serialid'/>
-            <input type='hidden' name='productid'/>
-            <input type='hidden' name='name'/>
-            <input type='hidden' name='userid'/>
+          <form action='updateRecord.php' method='post'>
+            <div class='row'>
+              <input name='serialid' type='text' class='left-align' value=''>
+              <label for='serialid' class='left-align'>Serial ID</label>
+            </div>
+            <div class='row'>
+              <input name='prodid' type='text' class='left-align' value=''>
+              <label for='prodid' class='left-align'>Product ID</label>
+            </div>
+            <div class='row'>
+              <input name='name' type='text' class='left-align' value=''>
+              <label for='name' class='left-align'>Name</label>
+            </div>
+            <div class='row'>
+              <input name='userid' type='text' class='left-align' value=''>
+              <label for='userid' class='left-align'>User ID</label>
+            </div>
+            <input name='new-record type='hidden' value='1'>
             <input type='submit' value='Save'/>
-            </form>
-            </tr>
-          </tbody>
-        </table>
+          </form>
       <?php }?>
 	    </div>
 	  </div>
