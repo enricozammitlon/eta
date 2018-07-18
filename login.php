@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             session_start();
 
                             $_SESSION['username'] = $username;
-                            $sql = 'SELECT ISADMIN FROM users WHERE USERNAME = $username'
+                            $sql = 'SELECT ISADMIN FROM users WHERE USERNAME = $username';
 
                             $retval = mysqli_query($conn,$sql);
 
