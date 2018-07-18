@@ -109,6 +109,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                               die('Could not get data: ' . mysqli_error());
                               echo '<p>Error: Could not get data </p>';
                             }    
+                            ?><p><?php echo("{$retval}"."<br />");?></p><?php
                             $row=mysqli_fetch_assoc($retval);
                             ?><p><?php echo("{$row['ISADMIN']}"."<br />");?></p><?php
                             $_SESSION['isAdmin'] = $row['ISADMIN'];
