@@ -109,9 +109,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                               die('Could not get data: ' . mysqli_error());
                               echo '<p>Error: Could not get data </p>';
                             }    
-                            $row = mysqli_fetch_assoc($retval);
 
-                            $_SESSION['isAdmin'] = $row;      
+                            $_SESSION['isAdmin'] = $retval;      
 
                             header("location: index.php");
 
@@ -151,13 +150,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         mysqli_stmt_close($stmt);
 
     }
-
-    
-
-    // Close connection
-
-    mysqli_close($link);
-
 }
 
 ?>
