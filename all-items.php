@@ -14,7 +14,12 @@
 	    <div class="main-content">
         <h2>All Items</h2>
 		<?php
-			$sql = 'SELECT * FROM items ';
+      if($_SESSION['isAdmin']){
+        $sql = 'SELECT * FROM items ';
+      }
+      else{
+       $sql = 'SELECT * FROM items WHERE USERID=\''.$_SESSION["userID"].'\'';
+      }
 			$retval = mysqli_query($conn,$sql);
 
 			if(! $retval ) {

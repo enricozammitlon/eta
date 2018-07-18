@@ -2,8 +2,9 @@ html{
   font-family: "Roboto", sans-serif;
 }
 
-h1,p{
+h1,p,h2 {
   display:inline;
+  text-align: center;
 }
 
 body{
@@ -14,7 +15,6 @@ header{
   display:flex;
   align-self: right;
   justify-content: center;
-  padding-left: 21%;
   background: #151515;
   color: white;
   border-radius: 10px;
@@ -25,6 +25,11 @@ header{
 
 div.db-status {
   text-align: right;
+}
+
+div.greeting {
+  text-align:left;
+  padding-right: 150px;
 }
 
 footer{

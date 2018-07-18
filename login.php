@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             session_start();
 
                             $_SESSION['username'] = $username;
-                            $sql = 'SELECT ISADMIN FROM users WHERE USERNAME = \''.$username.'\'';
+                            $sql = 'SELECT ISADMIN,USERID FROM users WHERE USERNAME = \''.$username.'\'';
 
                             $retval = mysqli_query($conn,$sql);
 
@@ -111,6 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             }    
                             $row=mysqli_fetch_assoc($retval);
                             $_SESSION['isAdmin'] = $row['ISADMIN'];
+                            $_SESSION['userID'] = $row['USERID'];
                             header("location: index.php");
 
                         } else{
