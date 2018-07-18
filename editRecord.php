@@ -6,7 +6,13 @@
 	    <div class="main-content">
 	    <?php 
 		    if($_SERVER["REQUEST_METHOD"] == "POST"){
-    			$sql = 'SELECT * FROM items WHERE SERIALID =\''.$_POST["serialid"].'\' AND PRODNUM = \''.$_POST["prodnum"].'\'';
+          session_start();
+          if($_SESSION['isAdmin']){
+            $sql = 'SELECT * FROM items WHERE SERIALID =\''.$_POST["serialid"].'\' AND PRODNUM = \''.$_POST["prodnum"].'\'';  
+          }
+          else{
+    			 $sql = 'SELECT * FROM items WHERE SERIALID =\''.$_POST["serialid"].'\' AND PRODNUM = \''.$_POST["prodnum"].'\' AND USERID=\''.$_POST["userid"].'\'';
+          }
     			$retval = mysqli_query($conn,$sql);
     			if(! $retval ) {
     			  die('Could not get data: '.mysqli_error());

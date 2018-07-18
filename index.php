@@ -6,8 +6,12 @@ include_once('header.php');?>
    	<?php 
    		session_start();
    		if($_SESSION['isAdmin']){
-   		 include_once('admin-menu.php');
-		}?>
+ 		   include_once('admin-menu.php');
+		}
+		else{
+		  include_once('user-menu.php');
+		}
+		?>
     </div>
     <div class="main-content">
       <h1> Here goes the actual content </h1>
