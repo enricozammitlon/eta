@@ -51,5 +51,4 @@ session_start();
 	  </div>
 	</div>
 <?php }
-echo "<script type='text/javascript'>alert('Action needs admin account!');</script>";
 include_once('footer.php');?>
