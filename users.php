@@ -2,7 +2,6 @@
 session_start();
   include_once('header.php');
   if($_SESSION['isAdmin']){
-
   ?>
 	<div class="all-content">
 	    <div class="left-admin-menu">
@@ -51,4 +50,6 @@ session_start();
 		?>
 	  </div>
 	</div>
-<?}php include_once('footer.php');?>
+<?php }
+echo "<script type='text/javascript'>alert('Action needs admin account!');</script>";
+include_once('footer.php');?>
