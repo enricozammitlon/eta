@@ -32,7 +32,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     <header>
       <div class="greeting">
         <h4>Welcome Back</h4>
-        <h1>$_SESSION['username']</h1>
+        <h1><?php echo $_SESSION['username']; ?></h1>
       </div>
       <div class="title-text">
         <h1>E</h1>
@@ -49,4 +49,5 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
         <p>DB Status: </p>
           <strong><?php include_once('initDB.php');?></strong>
       </div>
-     </header>      
+     </header>
+

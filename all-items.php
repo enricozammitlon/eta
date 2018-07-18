@@ -1,7 +1,15 @@
 <?php include_once('header.php');?>
 	<div class="all-content">
 	    <div class="left-admin-menu">
-	    <?php include_once('admin-menu.php');?>
+	    <?php 
+      session_start();
+      if($_SESSION['isAdmin']){
+       include_once('admin-menu.php');
+    }
+    else{
+      include_once('user-menu.php');
+    }
+    ?>
 	    </div>
 	    <div class="main-content">
         <h2>All Items</h2>
