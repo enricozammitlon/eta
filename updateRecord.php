@@ -1,12 +1,13 @@
 <?php 
 
 include_once('initDB.php');
+session_start();
 
 if(isset($_POST["new-record"])){
   $sql = 'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
     \''.$_POST["name"].'\',
     \''.$_POST["prodid"].'\',
-    \''.$_POST["userid"].'\')';
+    \''.$_SESSION["userID"].'\')';
 
 }
 
@@ -23,7 +24,7 @@ else{
   $sql = 'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
   \''.$_POST["name"].'\',
   \''.$_POST["prodid"].'\',
-  \''.$_POST["userid"].'\')';
+  \''.$_SESSION["userID"].'\')';
 
   }
 
