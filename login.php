@@ -218,7 +218,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             </div>
 
-            <p>Don't have an account? Please contact your system administrator.</p>
+            <p>Don't have an account?<br>Please contact your system administrator.</p>
 
         </form>
 
