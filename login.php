@@ -100,7 +100,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                             session_start();
 
-                            $_SESSION['username'] = $username;      
+                            $_SESSION['username'] = $username;
+                            $sql = 'SELECT ISADMIN FROM users WHERE USERNAME = $username'
+
+                            $retval = mysqli_query($conn,$sql);
+
+                            if(! $retval ) {
+                              die('Could not get data: ' . mysqli_error());
+                              echo '<p>Error: Could not get data </p>';
+                            }    
+                            $row = mysqli_fetch_assoc($retval);
+
+                            $_SESSION['isAdmin'] = $row['ISADMIN'];      
 
                             header("location: index.php");
 

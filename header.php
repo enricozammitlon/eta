@@ -42,6 +42,8 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
       </div>
       <div class="db-status">
         <p>DB Status: </p>
-        <strong><?php include_once('initDB.php');?></strong>
+        <?php if($_SESSION['username']=='1'){ ?>
+          <strong><?php include_once('initDB.php');?></strong>
+        <?php } ?>
       </div>
      </header>      
