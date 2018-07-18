@@ -49,5 +49,4 @@ if($_SESSION['isAdmin']){
 		?>
 	  </div>
 	</div>
-<?} else{   echo "<script type='text/javascript'>alert('Action requires admin account!');</script>";}
-  php include_once('footer.php');?>
+<?}php include_once('footer.php');?>
