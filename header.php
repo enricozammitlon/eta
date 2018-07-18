@@ -30,6 +30,10 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 
   <body>
     <header>
+      <div class="greeting">
+        <h4>Welcome Back</h4>
+        <h1>$_SESSION['username']</h1>
+      </div>
       <div class="title-text">
         <h1>E</h1>
         <p>quipment</p>
