@@ -1,13 +1,14 @@
 <?php 
-session_start();
 
 include_once('header.php');?>
   <div class="all-content">
     <div class="left-admin-menu">
-   	<?php echo '<p>'.$_SESSION['isAdmin'].'</p>'; ?>
-    <?php if($_SESSION['isAdmin']){ ?>
-    <?php include_once('admin-menu.php');?>
-    <?php }?>
+   	<?php 
+   		session_start();
+   		echo '<p>'.$_SESSION['isAdmin'].'</p>'; 
+   		if($_SESSION['isAdmin']){
+   		 include_once('admin-menu.php');
+		}?>
     </div>
     <div class="main-content">
       <h1> Here goes the actual content </h1>

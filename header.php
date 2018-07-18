@@ -44,4 +44,3 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
           <strong><?php include_once('initDB.php');?></strong>
       </div>
      </header>      
-<?php exit; ?>

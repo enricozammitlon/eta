@@ -112,7 +112,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $row=mysqli_fetch_assoc($retval);
                             $_SESSION['isAdmin'] = $row['ISADMIN'];      
                             header("location: index.php");
-                            exit;
                             
                         } else{
 
