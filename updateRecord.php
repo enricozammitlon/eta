@@ -7,7 +7,10 @@ if(isset($_POST["new-record"])){
   $sql = 'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
     \''.$_POST["name"].'\',
     \''.$_POST["prodid"].'\',
-    \''.$_SESSION["userID"].'\')';
+    \''.$_SESSION["userID"].'\',
+    \''.$_POST["location"].'\',
+    \''.$_POST["date"].'\',
+    \''.$_POST["status"].'\')';
 
 }
 
@@ -24,7 +27,10 @@ else{
   $sql = 'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
   \''.$_POST["name"].'\',
   \''.$_POST["prodid"].'\',
-  \''.$_SESSION["userID"].'\')';
+  \''.$_SESSION["userID"].'\',
+  \''.$_POST["location"].'\',
+  \''.$_POST["date"].'\',
+  \''.$_POST["status"].'\')';
 
   }
 

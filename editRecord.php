@@ -63,6 +63,18 @@
               <input name='name' type='text' class='left-align' value=''>
               <label for='name' class='left-align'>Name</label>
             </div>
+            <div class='row'>
+              <input name='location' type='text' class='left-align' value=''>
+              <label for='location' class='left-align'>Location</label>
+            </div>
+            <div class='row'>
+              <input name='date' type='text' class='left-align' value=''>
+              <label for='date' class='left-align'>Date</label>
+            </div>
+            <div class='row'>
+              <input name='status' type='text' class='left-align' value=''>
+              <label for='status' class='left-align'>Status</label>
+            </div>
             <input name='new-record' type='hidden' value='1'>
             <input type='submit' value='Save'/>
           </form>
