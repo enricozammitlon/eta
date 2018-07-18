@@ -7,7 +7,7 @@ include_once('header.php');?>
    	<?php echo '<p>'.$_SESSION['isAdmin'].'</p>'; ?>
     <?php if($_SESSION['isAdmin']){ ?>
     <?php include_once('admin-menu.php');?>
-    <?php } session_write_close(); ?>
+    <?php }?>
     </div>
     <div class="main-content">
       <h1> Here goes the actual content </h1>

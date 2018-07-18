@@ -15,7 +15,6 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   exit;
 
 }
- session_write_close();
 ?>
 
  <html>
