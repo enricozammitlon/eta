@@ -1,4 +1,7 @@
-<?php include_once('header.php');?>
+<?php 
+session_start();
+if($_SESSION['isAdmin']){
+  include_once('header.php');?>
 	<div class="all-content">
 	    <div class="left-admin-menu">
 	    <?php include_once('admin-menu.php');?>
@@ -46,4 +49,5 @@
 		?>
 	  </div>
 	</div>
-<?php include_once('footer.php'); ?>
+<?} else{ notEnoughPrivs();}
+  php include_once('footer.php');?>

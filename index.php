@@ -5,7 +5,6 @@ include_once('header.php');?>
     <div class="left-admin-menu">
    	<?php 
    		session_start();
-   		?><p><?php echo("{$_SESSION['isAdmin']}"."<br />");?></p><?php
    		if($_SESSION['isAdmin']){
    		 include_once('admin-menu.php');
 		}?>

@@ -15,6 +15,12 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   exit;
 
 }
+
+function notEnoughPrivs(){
+  echo "<script type='text/javascript'>alert('Action requires admin account!');</script>";
+}
+
+
 ?>
 
  <html>
