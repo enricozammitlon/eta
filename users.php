@@ -1,7 +1,9 @@
 <?php 
 session_start();
-if($_SESSION['isAdmin']){
-  include_once('header.php');?>
+  include_once('header.php');
+  if($_SESSION['isAdmin']){
+
+  ?>
 	<div class="all-content">
 	    <div class="left-admin-menu">
 	    <?php include_once('admin-menu.php');?>
