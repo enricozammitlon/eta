@@ -42,7 +42,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
       </div>
       <div class="db-status">
         <p>DB Status: </p>
-        <?php if($_SESSION['isAdmin']=='1'){ ?>
+        <?php if($_SESSION['isAdmin']){ ?>
           <strong><?php include_once('initDB.php');?></strong>
         <?php } ?>
       </div>
