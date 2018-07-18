@@ -1,4 +1,7 @@
-<?php include_once('header.php');?>
+<?php 
+session_start();
+
+include_once('header.php');?>
   <div class="all-content">
     <div class="left-admin-menu">
    	<?php echo '<p>'.$_SESSION['isAdmin'].'</p>'; ?>
