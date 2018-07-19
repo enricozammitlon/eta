@@ -36,6 +36,10 @@
               <th>Product ID</th>
               <th>Name</th>
               <th>User ID of Reporter</th>
+              <th>Location</th>
+              <th>Description</th>
+              <th>Timestamp</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
@@ -47,6 +51,10 @@
                   <td>{$row['PRODNUM']}</td>
                   <td>{$row['NAME']}</td>
                   <td>{$row['USERID']}</td>
+                  <td>{$row['LOCATION']}</td>
+                  <td>{$row['DESCRIPTION']}</td>
+                  <td>{$row['FAULTDATE']}</td>
+                  <td>{$row['STATUS']}</td>
                   <td style='border:none;'>
                   <form action='editRecord.php' method='post'>
                   <input type='hidden' name='serialid' value=\"{$row['SERIALID']}\" />
