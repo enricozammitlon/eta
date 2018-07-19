@@ -68,8 +68,8 @@
               <label for='location' class='left-align'>Location</label>
             </div>
             <div class='row'>
-              <input name='date' type='text' class='left-align' value=''>
-              <label for='date' class='left-align'>Date</label>
+              <input name='description' type='text' class='left-align' value=''>
+              <label for='description' class='left-align'>Description</label>
             </div>
             <div class='row'>
               <input name='status' type='text' class='left-align' value=''>

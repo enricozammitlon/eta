@@ -9,7 +9,8 @@ if(isset($_POST["new-record"])){
     \''.$_POST["prodid"].'\',
     \''.$_SESSION["userID"].'\',
     \''.$_POST["location"].'\',
-    \''.$_POST["date"].'\',
+    \''.$_POST["description"].'\',
+    \' CURRENT_TIMESTAMP \',
     \''.$_POST["status"].'\')';
 
 }
