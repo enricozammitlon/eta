@@ -10,7 +10,7 @@ if(isset($_POST["new-record"])){
     \''.$_SESSION["userID"].'\',
     \''.$_POST["location"].'\',
     \''.$_POST["description"].'\',
-    \' CURRENT_TIMESTAMP \',
+    \' UNIX_TIMESTAMP() \',
     \''.$_POST["status"].'\')';
 
 }
