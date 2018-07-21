@@ -51,8 +51,8 @@
                         <input class='saveB' type='submit' value='Save'/>
                       </div>
                       <div class='second-half'>
-                        <input type='file' onchange='readURL(this);' />
-                        <img id='blah' src='#' alt='your image' />
+                        <input type='file' id='files' />
+                        <img id='image' />
                       </div>
                       <input name='date' type='hidden' value='{$row['FAULTDATE']}'>            
                       <input type='hidden' name='prevserialid' value='{$row['SERIALID']}'/>
@@ -98,19 +98,16 @@
 	    </div>
 	  </div>
   <script type="text/javascript">
-         function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+    document.getElementById("files").onchange = function () {
+        var reader = new FileReader();
 
-                reader.onload = function (e) {
-                    $('#blah')
-                        .attr('src', e.target.result)
-                        .width(150)
-                        .height(200);
-                };
+        reader.onload = function (e) {
+            // get loaded data and render thumbnail.
+            document.getElementById("image").src = e.target.result;
+        };
 
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
+    };
   </script>
 	<?php include_once('footer.php');?>
