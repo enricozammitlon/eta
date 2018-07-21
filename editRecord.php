@@ -21,6 +21,7 @@
                 <?php
                   if($row = mysqli_fetch_assoc($retval)) {
                     echo "
+                    <div class='table-edit'>
                     <form action='updateRecord.php' method='post'>
                       <div class='row'>
                         <input name='serialid' type='text' class='left-align' value='{$row['SERIALID']}'>
@@ -51,6 +52,7 @@
                       <input type='hidden' name='prevprodnum' value='{$row['PRODNUM']}'/>
                       <input type='submit' value='Save'/>
                       </form>
+                      </div>
                       ";
                   }
                 ?>
