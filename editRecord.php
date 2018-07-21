@@ -46,10 +46,9 @@
                         <input name='status' type='text' class='left-align' value='{$row['STATUS']}'>
                         <label for='status' class='left-align'>Status</label>
                       </div>
-                      <input name='date' type='hidden' value='{$row['FAULTDATE']'>            
+                      <input name='date' type='hidden' value='{$row['FAULTDATE']}'>            
                       <input type='hidden' name='prevserialid' value='{$row['SERIALID']}'/>
                       <input type='hidden' name='prevprodnum' value='{$row['PRODNUM']}'/>
-
                       <input type='submit' value='Save'/>
                       </form>
                       ";
