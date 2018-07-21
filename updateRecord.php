@@ -4,13 +4,16 @@ include_once('initDB.php');
 session_start();
 
 if(isset($_POST["new-record"])){
+  $unixTimestamp = time();
+  $mysqlTimestamp = date("Y-m-d", $unixTimestamp);
+
   $sql = 'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
     \''.$_POST["name"].'\',
     \''.$_POST["prodid"].'\',
     \''.$_SESSION["userID"].'\',
     \''.$_POST["location"].'\',
     \''.$_POST["description"].'\',
-    \' UNIX_TIMESTAMP() \',
+    \''.$mysqlTimestamp.'\',
     \''.$_POST["status"].'\')';
 
 }
