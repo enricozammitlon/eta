@@ -47,6 +47,7 @@ div.left-admin-menu {
 div.main-content {
   margin-left:20px;
   align-self: right;
+  width:100%;
 }
 
 div.left-admin-menu button{
@@ -124,6 +125,15 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
     padding: 0;
     box-shadow: none;
     transition: all .3s;
+}
+
+th {
+  border:none;
+}
+
+table {
+  border:none;
+  margin-top:50px;
 }
 
 .left-align {
