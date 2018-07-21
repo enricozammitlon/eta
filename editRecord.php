@@ -51,8 +51,8 @@
                         <input class='saveB' type='submit' value='Save'/>
                       </div>
                       <div class='second-half'>
-                        <input type='file' id='files' />
-                        <img id='image' />
+                        <div id='drop_zone'>Drop files here</div>
+                        <output id='list'></output>
                       </div>
                       <input name='date' type='hidden' value='{$row['FAULTDATE']}'>            
                       <input type='hidden' name='prevserialid' value='{$row['SERIALID']}'/>
@@ -97,17 +97,34 @@
       <?php }?>
 	    </div>
 	  </div>
-  <script type="text/javascript">
-    document.getElementById("files").onchange = function () {
-        var reader = new FileReader();
 
-        reader.onload = function (e) {
-            // get loaded data and render thumbnail.
-            document.getElementById("image").src = e.target.result;
-        };
+<script>
+  function handleFileSelect(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
 
-        // read the image file as a data URL.
-        reader.readAsDataURL(this.files[0]);
-    };
-  </script>
+    var files = evt.dataTransfer.files; // FileList object.
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  function handleDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+  }
+
+  // Setup the dnd listeners.
+  var dropZone = document.getElementById('drop_zone');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleFileSelect, false);
+</script>
 	<?php include_once('footer.php');?>
