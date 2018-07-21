@@ -23,29 +23,34 @@
                     echo "
                     <div class='table-edit'>
                     <form action='updateRecord.php' method='post'>
-                      <div class='row'>
-                        <input name='serialid' type='text' class='left-align' value='{$row['SERIALID']}'>
-                        <label for='serialid' class='left-align'>Serial ID</label>
+                      <div class='first-half'>
+                        <div class='row'>
+                          <input name='serialid' type='text' class='left-align' value='{$row['SERIALID']}'>
+                          <label for='serialid' class='left-align'>Serial ID</label>
+                        </div>
+                        <div class='row'>
+                          <input name='prodid' type='text' class='left-align' value='{$row['PRODNUM']}'>
+                          <label for='prodid' class='left-align'>Product ID</label>
+                        </div>
+                        <div class='row'>
+                          <input name='name' type='text' class='left-align' value='{$row['NAME']}'>
+                          <label for='name' class='left-align'>Name</label>
+                        </div>
+                        <div class='row'>
+                          <input name='location' type='text' class='left-align' value='{$row['LOCATION']}'>
+                          <label for='location' class='left-align'>Location</label>
+                        </div>
+                        <div class='row description'>
+                          <input name='description' type='text' class='left-align' value='{$row['DESCRIPTION']}'>
+                          <label for='description' class='left-align'>Description</label>
+                        </div>
+                        <div class='row'>
+                          <input name='status' type='text' class='left-align' value='{$row['STATUS']}'>
+                          <label for='status' class='left-align'>Status</label>
+                        </div>
                       </div>
-                      <div class='row'>
-                        <input name='prodid' type='text' class='left-align' value='{$row['PRODNUM']}'>
-                        <label for='prodid' class='left-align'>Product ID</label>
-                      </div>
-                      <div class='row'>
-                        <input name='name' type='text' class='left-align' value='{$row['NAME']}'>
-                        <label for='name' class='left-align'>Name</label>
-                      </div>
-                      <div class='row'>
-                        <input name='location' type='text' class='left-align' value='{$row['LOCATION']}'>
-                        <label for='location' class='left-align'>Location</label>
-                      </div>
-                      <div class='row'>
-                        <input name='description' type='text' class='left-align' value='{$row['DESCRIPTION']}'>
-                        <label for='description' class='left-align'>Description</label>
-                      </div>
-                      <div class='row'>
-                        <input name='status' type='text' class='left-align' value='{$row['STATUS']}'>
-                        <label for='status' class='left-align'>Status</label>
+                      <div class='second-half'>
+
                       </div>
                       <input name='date' type='hidden' value='{$row['FAULTDATE']}'>            
                       <input type='hidden' name='prevserialid' value='{$row['SERIALID']}'/>
