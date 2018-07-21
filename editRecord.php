@@ -113,18 +113,15 @@
       // Closure to capture the file information.
       reader.onload = (function(theFile) {
         return function(e) {
-          output.push('<li><strong>', escape(e.target.result), '</strong> </li>');
+          output.push('<li><strong>', e.target.result, '</strong> </li>');
+          var list = document.getElementById('list');
+          var newcontent = document.createElement('ul');
+          newcontent.innerHTML = output.join('');
+          while (newcontent.firstChild) {
+              list.appendChild(newcontent.firstChild);
+          }
         };
       })(f);
-
-      reader.readAsDataURL(f);
-    }
-    var list = document.getElementById('list');
-    var newcontent = document.createElement('ul');
-    newcontent.innerHTML = output.join('');
-
-    while (newcontent.firstChild) {
-        list.appendChild(newcontent.firstChild);
     }
   }
 
