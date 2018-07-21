@@ -113,7 +113,13 @@
                   f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
                   '</li>');
     }
-    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+    var list = document.getElementById('list');
+    var newcontent = document.createElement('ul');
+    newcontent.innerHTML = output.join('');
+
+    while (newcontent.firstChild) {
+        list.appendChild(newcontent.firstChild);
+    }
   }
 
   function handleDragOver(evt) {
