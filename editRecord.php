@@ -116,6 +116,8 @@
           output.push('<li><strong>', escape(e.target.result), '</strong> </li>');
         };
       })(f);
+
+      reader.readAsDataURL(f);
     }
     var list = document.getElementById('list');
     var newcontent = document.createElement('ul');
