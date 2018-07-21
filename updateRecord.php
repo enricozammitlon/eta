@@ -29,12 +29,13 @@ else{
   }
 
   $sql = 'INSERT INTO items VALUES (\''.$_POST["serialid"].'\',
-  \''.$_POST["name"].'\',
-  \''.$_POST["prodid"].'\',
-  \''.$_SESSION["userID"].'\',
-  \''.$_POST["location"].'\',
-  \''.$_POST["date"].'\',
-  \''.$_POST["status"].'\')';
+    \''.$_POST["name"].'\',
+    \''.$_POST["prodid"].'\',
+    \''.$_SESSION["userID"].'\',
+    \''.$_POST["location"].'\',
+    \''.$_POST["description"].'\',
+    \''.$_POST["date"].'\',
+    \''.$_POST["status"].'\')';
 
   }
 

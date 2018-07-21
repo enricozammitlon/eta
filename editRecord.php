@@ -35,9 +35,18 @@
                         <label for='name' class='left-align'>Name</label>
                       </div>
                       <div class='row'>
-                        <input name='userid' type='text' class='left-align' value='{$row['USERID']}'>
-                        <label for='userid' class='left-align'>User ID</label>
+                        <input name='location' type='text' class='left-align' value='{$row['LOCATION']}'>
+                        <label for='location' class='left-align'>Location</label>
                       </div>
+                      <div class='row'>
+                        <input name='description' type='text' class='left-align' value='{$row['DESCRIPTION']}'>
+                        <label for='description' class='left-align'>Description</label>
+                      </div>
+                      <div class='row'>
+                        <input name='status' type='text' class='left-align' value='{$row['STATUS']}'>
+                        <label for='status' class='left-align'>Status</label>
+                      </div>
+                      <input name='date' type='hidden' value='{$row['FAULTDATE']'>            
                       <input type='hidden' name='prevserialid' value='{$row['SERIALID']}'/>
                       <input type='hidden' name='prevprodnum' value='{$row['PRODNUM']}'/>
 
