@@ -1,6 +1,6 @@
 <?php
 
-$uploadDir = "/uploads";
+$uploadDir = "/images";
 $permitted = array('image/jpeg', 'image/jpeg', 'image/png', 'image/gif');               
 
 $fileName  = $_FILES['image']['name'];
