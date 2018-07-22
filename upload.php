@@ -1,6 +1,6 @@
 <?php
 
-$uploadDir = "/uploads/";
+$uploadDir = "uploads/";
 $permitted = array('image/jpeg', 'image/jpeg', 'image/png', 'image/gif');               
 
 $fileName  = $_FILES['image']['name'];
@@ -30,6 +30,7 @@ if (in_array($fileType, $permitted))
             // keep track post values
             $name = $_POST['name'];
             $description = $_POST['description'];
+            echo "success";
         } 
     }
 ?>
