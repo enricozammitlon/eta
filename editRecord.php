@@ -108,7 +108,7 @@
     // files is a FileList of File objects. List some properties.
     var output = [];
     for (var i = 0, f; f = files[i]; i++) {
-      output.push(escape(f.name));
+      output.push('<li>',escape(f.name),'</li>');
     }
     var mydiv = document.getElementById("list");
     var newcontent = document.createElement('li');
