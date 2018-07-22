@@ -108,21 +108,16 @@
     // files is a FileList of File objects. List some properties.
     var output = [];
     for (var i = 0, f; f = files[i]; i++) {
-      var reader = new FileReader();
-
-      // Closure to capture the file information.
-      reader.onload = (function(theFile) {
-        return function(e) {
-          output.push('<li><strong>', e.target.result, '</strong> </li>');
-          var list = document.getElementById('list');
-          var newcontent = document.createElement('ul');
-          newcontent.innerHTML = output.join('');
-          while (newcontent.firstChild) {
-              list.appendChild(newcontent.firstChild);
-          }
-        };
-      })(f);
+      output.push(escape(f.name));
     }
+    var mydiv = document.getElementById("list");
+    var newcontent = document.createElement('li');
+    newcontent.innerHTML = output.join('');
+
+    while (newcontent.firstChild) {
+        mydiv.appendChild(newcontent.firstChild);
+    }
+    //document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }
 
   function handleDragOver(evt) {
