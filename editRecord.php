@@ -127,7 +127,7 @@
       })(f);
 
       // Read in the image file as a data URL.
-      reader.readAsDataURL(f);
+      //reader.readAsDataURL(f);
     }
   }
 
