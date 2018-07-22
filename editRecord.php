@@ -22,7 +22,7 @@
                   if($row = mysqli_fetch_assoc($retval)) {
                     echo "
                     <div class='table-edit'>
-                    <form action='updateRecord.php' method='post'>
+                    <form action='updateRecord.php' method='post' enctype='multipart/form-data'>
                       <div class='first-half'>
                         <div class='row'>
                           <input name='serialid' type='text' class='left-align' value='{$row['SERIALID']}'>
@@ -51,10 +51,8 @@
                         <input class='saveB' type='submit' value='Save'/>
                       </div>
                       <div class='second-half'>
-                        <form action='upload.php' method='post' enctype='multipart/form-data'>
-                          <input type='file' id='files' name='files[]' multiple />
-                          <output id='list'></output>
-                        </form>
+                        <input type='file' id='files' name='files[]' multiple />
+                        <output id='list'></output>
                       </div>
                       <input name='date' type='hidden' value='{$row['FAULTDATE']}'>            
                       <input type='hidden' name='prevserialid' value='{$row['SERIALID']}'/>
