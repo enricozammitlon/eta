@@ -114,7 +114,7 @@
 
           var mydiv = document.getElementById("list");
           var newcontent = document.createElement('li');
-          newcontent.innerHTML = '<li>'.e.target.result.'</li>';
+          newcontent.innerHTML = '<li>'+e.target.result+'</li>';
 
           while (newcontent.firstChild) {
               mydiv.appendChild(newcontent.firstChild);
