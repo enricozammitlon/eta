@@ -20,15 +20,7 @@ if(isset($_POST["new-record"])){
 
 else{
 
-  if ($_FILES["file"]["error"] > 0) {
-    echo "Error: " . $_FILES["file"]["error"] . "<br>";
-  } 
-  else {
-      echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-      echo "Type: " . $_FILES["file"]["type"] . "<br>";
-      echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-      echo "Stored in: " . $_FILES["file"]["tmp_name"];
-  }
+  include_once('upload.php');
 
   $sql1 = 'DELETE FROM items WHERE SERIALID =\''.$_POST["prevserialid"].'\' AND PRODNUM = \''.$_POST["prevprodnum"].'\';';
   $retval = mysqli_query($conn,$sql1);
