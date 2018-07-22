@@ -100,24 +100,35 @@
 
 <script>
   function handleFileSelect(evt) {
-    evt.stopPropagation();
-    evt.preventDefault();
+    var files = evt.target.files; // FileList object
 
-    var files = evt.dataTransfer.files; // FileList object.
-
-    // files is a FileList of File objects. List some properties.
-    var output = [];
+    // Loop through the FileList and render image files as thumbnails.
     for (var i = 0, f; f = files[i]; i++) {
-      output.push('<li>',escape(f.name),'</li>');
-    }
-    var mydiv = document.getElementById("list");
-    var newcontent = document.createElement('li');
-    newcontent.innerHTML = output.join('');
 
-    while (newcontent.firstChild) {
-        mydiv.appendChild(newcontent.firstChild);
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+
+          var mydiv = document.getElementById("list");
+          var newcontent = document.createElement('li');
+          newcontent.innerHTML = '<li>'.e.target.result.'</li>';
+
+          while (newcontent.firstChild) {
+              mydiv.appendChild(newcontent.firstChild);
+          }
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
     }
-    //document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }
 
   function handleDragOver(evt) {
