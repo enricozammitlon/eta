@@ -30,15 +30,6 @@ if (in_array($fileType, $permitted))
             // keep track post values
             $name = $_POST['name'];
             $description = $_POST['description'];
-            // update data
-            $pdo = Database::connect();
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "UPDATE food set name = ?, image = ?, path = ?, description = ? 
-                    WHERE id = ?";
-                $q = $pdo->prepare($sql);
-                $q->execute(array($name,$myFile,$path,$description,$id));
-                Database::disconnect();
-                echo "<code>Information updated!!</code>";
         } 
     }
 ?>
