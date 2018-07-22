@@ -51,8 +51,10 @@
                         <input class='saveB' type='submit' value='Save'/>
                       </div>
                       <div class='second-half'>
-                        <input type='file' id='files' name='files[]' multiple />
-                        <output id='list'></output>
+                        <form action='upload.php' method='post' enctype='multipart/form-data'>
+                          <input type='file' id='files' name='files[]' multiple />
+                          <output id='list'></output>
+                        </form>
                       </div>
                       <input name='date' type='hidden' value='{$row['FAULTDATE']}'>            
                       <input type='hidden' name='prevserialid' value='{$row['SERIALID']}'/>
@@ -104,6 +106,10 @@
 
     // Loop through the FileList and render image files as thumbnails.
     for (var i = 0, f; f = files[i]; i++) {
+            // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
 
       var reader = new FileReader();
 
@@ -115,14 +121,6 @@
           span.innerHTML = ['<img class="thumb" src="', e.target.result,
                             '" title="', escape(theFile.name), '"/>'].join('');
           document.getElementById('list').insertBefore(span, null);
-
-          var mydiv = document.getElementById("list");
-          var newcontent = document.createElement('ul');
-          newcontent.innerHTML = ['<li>"', e.target.result, '"</li>'].join('');
-
-          while (newcontent.firstChild) {
-              mydiv.appendChild(newcontent);
-          }
         };
       })(f);
 
