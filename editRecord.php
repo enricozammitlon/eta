@@ -51,7 +51,7 @@
                         <input class='saveB' type='submit' value='Save'/>
                       </div>
                       <div class='second-half'>
-                        <div id='drop_zone'>Drop files here</div>
+                        <input type='file' id='files' name='files[]' multiple />
                         <output id='list'></output>
                       </div>
                       <input name='date' type='hidden' value='{$row['FAULTDATE']}'>            
@@ -105,11 +105,6 @@
     // Loop through the FileList and render image files as thumbnails.
     for (var i = 0, f; f = files[i]; i++) {
 
-      // Only process image files.
-      if (!f.type.match('image.*')) {
-        continue;
-      }
-
       var reader = new FileReader();
 
       // Closure to capture the file information.
@@ -120,15 +115,14 @@
           span.innerHTML = ['<img class="thumb" src="', e.target.result,
                             '" title="', escape(theFile.name), '"/>'].join('');
           document.getElementById('list').insertBefore(span, null);
-          /*
-          var mydiv = document.getElementById("list");
-          var newcontent = document.createElement('li');
-          newcontent.innerHTML = ['<li>'.e.target.result.'</li>'].join('');
+
+          var mydiv = document.getElementById("files");
+          var newcontent = document.createElement('ul');
+          newcontent.innerHTML = ['<li>"', e.target.result, '"</li>'].join('');
 
           while (newcontent.firstChild) {
               mydiv.appendChild(newcontent.firstChild);
           }
-          */
         };
       })(f);
 
@@ -137,15 +131,6 @@
     }
   }
 
-  function handleDragOver(evt) {
-    evt.stopPropagation();
-    evt.preventDefault();
-    evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
-  }
-
-  // Setup the dnd listeners.
-  var dropZone = document.getElementById('drop_zone');
-  dropZone.addEventListener('dragover', handleDragOver, false);
-  dropZone.addEventListener('drop', handleFileSelect, false);
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
 	<?php include_once('footer.php');?>
