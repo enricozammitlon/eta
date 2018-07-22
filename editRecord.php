@@ -51,7 +51,7 @@
                         <input class='saveB' type='submit' value='Save'/>
                       </div>
                       <div class='second-half'>
-                        <input type='file' id='files' name='files[]' multiple />
+                        <input type='file' id='files' name='photo' />
                         <output id='list'></output>
                       </div>
                       <input name='date' type='hidden' value='{$row['FAULTDATE']}'>            

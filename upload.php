@@ -1,36 +1,72 @@
-<?php
 
-$uploadDir = "uploads/";
-$permitted = array('image/jpeg', 'image/jpeg', 'image/png', 'image/gif');               
 
-$fileName  = $_FILES['image']['name'];
-$tmpName   = $_FILES['image']['tmp_name'];
-$fileSize  = $_FILES['image']['size'];
-$fileType  = $_FILES['image']['type'];
+    <?php
 
-// make a new image name
-$ext = substr(strrchr($fileName, "."), 1);
-// generate the random file name
-$randName = md5(rand() * time());
+    // Check if the form was submitted
 
-// image name with extension
-$myFile = $randName . '.' . $ext;
-// save image path
-$path = $uploadDir . $myFile;
-if (in_array($fileType, $permitted)) 
-{
-    $result = move_uploaded_file($tmpName, $path);
-        if (!$result) 
-        {
-                echo "Error uploading image file";
-                exit;
-        } 
-        else 
-        {                           
-            // keep track post values
-            $name = $_POST['name'];
-            $description = $_POST['description'];
-            echo "success";
-        } 
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+        // Check if file was uploaded without errors
+
+        if(isset($_FILES["photo"]) && $_FILES["photo"]["error"] == 0){
+
+            $allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png");
+
+            $filename = $_FILES["photo"]["name"];
+
+            $filetype = $_FILES["photo"]["type"];
+
+            $filesize = $_FILES["photo"]["size"];
+
+        
+
+            // Verify file extension
+
+            $ext = pathinfo($filename, PATHINFO_EXTENSION);
+
+            if(!array_key_exists($ext, $allowed)) die("Error: Please select a valid file format.");
+
+        
+
+            // Verify file size - 5MB maximum
+
+            $maxsize = 5 * 1024 * 1024;
+
+            if($filesize > $maxsize) die("Error: File size is larger than the allowed limit.");
+
+        
+
+            // Verify MYME type of the file
+
+            if(in_array($filetype, $allowed)){
+
+                // Check whether file exists before uploading it
+
+                if(file_exists("uploads/" . $_FILES["photo"]["name"])){
+
+                    echo $_FILES["photo"]["name"] . " is already exists.";
+
+                } else{
+
+                    move_uploaded_file($_FILES["photo"]["tmp_name"], "uploads/" . $_FILES["photo"]["name"]);
+
+                    echo "Your file was uploaded successfully.";
+
+                } 
+
+            } else{
+
+                echo "Error: There was a problem uploading your file. Please try again."; 
+
+            }
+
+        } else{
+
+            echo "Error: " . $_FILES["photo"]["error"];
+
+        }
+
     }
-?>
+
+    ?>
+
