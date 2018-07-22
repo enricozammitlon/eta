@@ -116,12 +116,12 @@
                             '" title="', escape(theFile.name), '"/>'].join('');
           document.getElementById('list').insertBefore(span, null);
 
-          var mydiv = document.getElementById("files");
+          var mydiv = document.getElementById("list");
           var newcontent = document.createElement('ul');
           newcontent.innerHTML = ['<li>"', e.target.result, '"</li>'].join('');
 
           while (newcontent.firstChild) {
-              mydiv.appendChild(newcontent.firstChild);
+              mydiv.appendChild(newcontent);
           }
         };
       })(f);
