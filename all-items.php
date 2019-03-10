@@ -2,7 +2,6 @@
 	<div class="all-content">
 	    <div class="left-admin-menu">
 	    <?php 
-      session_start();
       if($_SESSION['isAdmin']){
        include_once('admin-menu.php');
     }
@@ -28,7 +27,15 @@
 			}
 
 			else{
-        ?>
+        if(isset($_GET['result'])) {
+          $color="green";
+          if($_GET['result']!="Your file was uploaded successfully."){
+            $color="orange";
+          }
+
+          ?>
+          <p style="color:<?php echo $color ?>;font-weight: bold;"><br><br><?php print_r($_GET['result'])?></p>
+        <?php } ?>
         <table border="1" style="width:100%">
           <thead>
             <tr>

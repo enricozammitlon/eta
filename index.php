@@ -4,7 +4,6 @@ include_once('header.php');?>
   <div class="all-content">
     <div class="left-admin-menu">
    	<?php 
-   		session_start();
    		if($_SESSION['isAdmin']){
  		   include_once('admin-menu.php');
 		}

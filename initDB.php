@@ -1,11 +1,9 @@
     <?php
-        $url = getenv('JAWSDB_MARIA_URL');
-        $dbparts = parse_url($url);
 
-        $hostname = $dbparts['host'];
-        $username = $dbparts['user'];
-        $password = $dbparts['pass'];
-        $database = ltrim($dbparts['path'],'/');
+        $hostname = '127.0.0.1:3306';
+        $username = 'root';
+        $password = '';
+        $database = 'eta';
 
 
         // Create connection

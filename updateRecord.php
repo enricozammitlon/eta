@@ -1,6 +1,7 @@
 <?php 
 
 include_once('initDB.php');
+include_once('upload.php');
 session_start();
 
 if(isset($_POST["new-record"])){
@@ -20,13 +21,14 @@ if(isset($_POST["new-record"])){
 
 else{
 
-  include_once('upload.php');
+  $unixTimestamp = time();
+  $mysqlTimestamp = date("Y-m-d", $unixTimestamp);
 
   $sql1 = 'DELETE FROM items WHERE SERIALID =\''.$_POST["prevserialid"].'\' AND PRODNUM = \''.$_POST["prevprodnum"].'\';';
   $retval = mysqli_query($conn,$sql1);
 
   if(! $retval ) {
-    die('Could not get data: ' . mysqli_error());
+    die('Could not get data: ' . mysqli_error($conn));
     echo '<p>Error: Could not get data </p>';
   }
 
@@ -36,15 +38,18 @@ else{
     \''.$_SESSION["userID"].'\',
     \''.$_POST["location"].'\',
     \''.$_POST["description"].'\',
-    \''.$_POST["date"].'\',
+    \''.$mysqlTimestamp.'\',
     \''.$_POST["status"].'\')';
 
   }
 
 $retval = mysqli_query($conn,$sql);
 
+$resultUpload=testUploadFiles($conn);
+
+
 if(! $retval ) {
-  die('Could not get data: ' . mysqli_error());
+  die('Could not get data: ' . mysqli_error($conn));
   echo '<p>Error: Could not get data </p>';
 }
 
