@@ -1,5 +1,3 @@
-
-
 <?php
 
 // Include config file
