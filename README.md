@@ -1,1 +1,1 @@
-# replaceme
+This is a project (currently on hold cause I have a ton of other projects) for bookkeeping of items in a db and tracking of their status. It is pretty much an issue tracker. The plan for this is to be converted to something like Vue.js to experiment with it but this particular repo was done when I was working with php so it served as practice.
